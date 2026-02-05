@@ -15,9 +15,9 @@ st.markdown("Understanding the relationship between energy use, renewables, and 
 # =========================
 # LOAD DATA
 # =========================
-emissions_raw = pd.read_csv(data\eurostat_emissions.csv")
-renewables_raw = pd.read_csv(data\eurostat_renewables.csv")
-energy_raw = pd.read_csv(data\eurostat_energy.csv")
+emissions_raw = pd.read_csv(data/eurostat_emissions.csv")
+renewables_raw = pd.read_csv(data/eurostat_renewables.csv")
+energy_raw = pd.read_csv(data/eurostat_energy.csv")
 
 # =========================
 # CLEAN EUROSTAT DATA
@@ -197,4 +197,5 @@ st.pyplot(fig)
 # FOOTER
 # =========================
 st.caption("📊 Source: Eurostat | Streamlit Dashboard")
+
 
