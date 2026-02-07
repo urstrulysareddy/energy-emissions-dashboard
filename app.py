@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # =========================
-# PAGE CONFIG
+# PAGE CONFIGURATION
 # =========================
-st.set_page_config(page_title="Energy & Emissions Dashboard", layout="wide")
+st.set_page_config(page_title="Europe's Energy & Emissions Dashboard", layout="wide")
 sns.set_theme(style="whitegrid")
 
-st.title("🌍 Energy & Emissions Dashboard")
+st.title("Energy & Emissions Dashboard")
 st.markdown("Understanding the relationship between energy use, renewables, and CO₂ emissions")
 
 # =========================
@@ -73,7 +73,7 @@ ene_f = energy.query("country == @selected_country and year >= @year_range[0] an
 # =========================
 # TIME SERIES PLOTS
 # =========================
-st.subheader(f"📌 {selected_country} Trends")
+st.subheader(f" {selected_country} Trends")
 
 col1, col2, col3 = st.columns(3)
 
@@ -110,7 +110,7 @@ scatter_df = (
 # =========================
 # RELATIONSHIP PLOTS (IMPROVED)
 # =========================
-st.subheader("🔍 Energy–Emissions Relationships")
+st.subheader("Energy–Emissions Relationships")
 
 col4, col5 = st.columns(2)
 
@@ -165,7 +165,7 @@ with col5:
 # =========================
 # COMPARISON PLOT
 # =========================
-st.subheader("🌍 Top Emitting Countries")
+st.subheader("Top Emitting Countries")
 
 top_emitters = (
     emissions.groupby("country")["emissions"]
@@ -182,7 +182,7 @@ st.pyplot(fig)
 # =========================
 # CORRELATION HEATMAP
 # =========================
-st.subheader("📊 Correlation Overview")
+st.subheader("Correlation Overview")
 
 fig, ax = plt.subplots(figsize=(5,4))
 sns.heatmap(
@@ -196,7 +196,8 @@ st.pyplot(fig)
 # =========================
 # FOOTER
 # =========================
-st.caption("📊 Source: Eurostat | Streamlit Dashboard")
+st.caption("Source: Eurostat | Streamlit Dashboard")
+
 
 
 
